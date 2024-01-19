@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .timeline {
+            list-style-type: none;
+            display: flex;
+            justify-content: space-between;
+            margin: 50px 0;
+           
+        }
+        .timeline li {
+            width: 20%;
+            text-align: center;
+            position: relative;
+                       
+        }
+        .timeline li::before {
+            content: '';
+            height: 3px;
+            background: #000;
+            position: absolute;
+            top: 15px;
+            left: -50%;
+            right: 0;
+            z-index: -1;
+         
+        }
+        .timeline li:first-child::before {
+            left: 50%;
+        }
+        .timeline li:last-child::before {
+            right: 50%;
+        }
+    </style>
+</head>
+<body>
+    <ul class="timeline">
+        <li>Point 1 is about the first moment in time when we start this timeline</li>
+        <li>Point 2 is a second moment in time when we focuse on another moment in time</li>
+        <li>Point 3</li>
+        <li>Point 4</li>
+    </ul>
+    <a href="https://tatabou.github.io/timeline-project/timeline.html">go back</a>
+</body>
+</html>
