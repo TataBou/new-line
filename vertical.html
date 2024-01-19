@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .timeline {
+            position: relative;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background-color: #000;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+        }
+
+        .container {
+            padding: 10px 40px;
+            position: relative;
+            background-color: inherit;
+            width: 50%;
+        }
+
+        .container::after {
+            content: '';
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            right: -17px;
+            background-color: #000;
+            border: 4px solid #fff;
+            top: 15px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        .left {
+            left: 0;
+        }
+
+        .right {
+            left: 50%;
+        }
+
+        .right::before {
+            content: " ";
+            height: 0;
+            position: absolute;
+            top: 22px;
+            width: 0;
+            z-index: 1;
+            right: 30px;
+            border: medium solid white;
+            border-width: 10px 0 10px 10px;
+            border-color: transparent transparent transparent white;
+        }
+
+        .left::before {
+            content: " ";
+            height: 0;
+            position: absolute;
+            top: 22px;
+            width: 0;
+            z-index: 1;
+            left: 30px;
+            border: medium solid white;
+            border-width: 10px 10px 10px 0;
+            border-color: transparent white transparent transparent;
+        }
+
+        .content {
+            padding: 20px 30px;
+            background-color: white;
+            position: relative;
+            border-radius: 6px;
+        }
+    </style>
+</head>
+<body>
+    <div class="timeline">
+        <div class="container left">
+            <div class="content">
+                <h2>Starting Point 1</h2>
+                <p>Description for the starting Point 1</p>
+            </div>
+        </div>
+        <div class="container right">
+            <div class="content">
+                <h2>Point 2</h2>
+                <p>Description for Point 2</p>
+            </div>
+        </div>
+        <div class="container left">
+            <div class="content">
+                <h2>Point 3</h2>
+                <p>Description for Point 3</p>
+            </div>
+        </div>
+        <div class="container right">
+            <div class="content">
+                <h2>Point 4</h2>
+                <p>Description for Point 4</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
